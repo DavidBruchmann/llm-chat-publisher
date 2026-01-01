@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Theme Administration</title>
+  <link rel="stylesheet" href="./admin.css" />
+</head>
+<body>
+  <h1>Administration</h1>
+
+  <!-- FORM 1: Load existing settings -->
+  <section>
+    <h2>Load settings</h2>
+    <form id="loadForm">
+      <input type="file" id="settingsFile" accept=".json" />
+      <button type="submit">Load</button>
+    </form>
+  </section>
+
+  <!-- FORM 2: Edit settings -->
+  <section>
+    <h2>Theme settings</h2>
+    <form id="settingsForm">
+
+      <fieldset>
+        <legend>Colors – Light</legend>
+        <label>Link <input type="color" name="light_link"></label>
+        <label>Active <input type="color" name="light_active"></label>
+        <label>Background <input type="color" name="light_bg"></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Colors – Dark</legend>
+        <label>Link <input type="color" name="dark_link"></label>
+        <label>Active <input type="color" name="dark_active"></label>
+        <label>Background <input type="color" name="dark_bg"></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Fonts</legend>
+        <label>Base font <input type="text" name="font_base"></label>
+        <label>Monospace <input type="text" name="font_mono"></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Branding</legend>
+        <label>Ko-fi name <input type="text" name="kofi"></label>
+        <label>Logo file <input type="text" name="logo"></label>
+      </fieldset>
+
+      <button type="submit">Save settings</button>
+    </form>
+  </section>
+
+  <script src="./admin.js"></script>
+</body>
+</html>

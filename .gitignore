@@ -1,0 +1,34 @@
+# Node
+node_modules/
+
+# Docusaurus
+build/
+.docusaurus/
+
+# Generated theme files
+src/scss/custom_variables.scss
+src/scss/custom_variables.css
+
+# Admin server runtime
+.Build/tools/admin-server/.cache/
+.Build/tools/admin-server/.tmp/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Certificates
+certs/
+*.pem
+*.key
+
+# Environment variables
+.env
+.env.*
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+.cache/

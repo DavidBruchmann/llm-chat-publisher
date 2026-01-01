@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Project Administration</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" href="/admin.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>Administration</h1>
+    <p class="subtitle">Project configuration & tools</p>
+  </header>
+
+  <main class="container">
+
+  <!-- Dashboard view -->
+  <section id="view-dashboard" class="view active">
+
+    <div class="card">
+      <h2>Theme & Branding</h2>
+      <p>Configure colors, fonts, logo and Ko-fi settings.</p>
+      <button id="open-theme">Open settings</button>
+    </div>
+
+    <div class="card">
+      <h2>Content Tools</h2>
+      <p>Run content normalization and conversion tools.</p>
+      <button disabled>Coming soon</button>
+    </div>
+
+    <div class="card">
+      <h2>System</h2>
+      <p>Information about build and environment.</p>
+      <button disabled>Coming soon</button>
+    </div>
+
+  </section>
+
+  <!-- Theme settings view -->
+  <section id="view-theme" class="view">
+
+    <div class="card">
+      <h2>Theme & Branding</h2>
+
+      <form id="theme-form">
+
+        <label>
+          Primary color
+          <input type="color" name="primaryColor" value="#2563eb" />
+        </label>
+
+        <label>
+          Font family
+          <input type="text" name="fontFamily" value="system-ui" />
+        </label>
+
+        <label>
+          Ko-fi username
+          <input type="text" name="kofiUser" placeholder="yourname" />
+        </label>
+
+        <div class="actions">
+          <button type="submit">Save (preview)</button>
+          <button type="button" id="back">Back</button>
+        </div>
+
+      </form>
+    </div>
+
+  </section>
+
+</main>
+
+
+  <footer class="footer">
+    <span>Admin UI · Local only</span>
+  </footer>
+
+  <script type="module" src="/admin.js"></script>
+</body>
+</html>

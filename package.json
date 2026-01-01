@@ -1,0 +1,45 @@
+{
+  "name": "qa-knowledge-base",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "docusaurus start",
+    "start:https": "docusaurus start --https --port 3001",
+    "build": "docusaurus build",
+    "serve": "docusaurus serve",
+    "clear": "docusaurus clear",
+    "docs:normalize": "node .Build/scripts/add-front-matter.mjs",
+    "prebuild": "npm run docs:normalize",
+    "deploy": "docusaurus deploy",
+    "admin:start": "node .Build/tools/admin-server/server.mjs",
+    "admin:start:https": "node .Build/tools/admin-server/server.mjs --https",
+    "admin:start:port": "node .Build/tools/admin-server/server.mjs --port=$PORT",
+    "dev": "concurrently \"npm run start\" \"npm run admin:start\""
+  },
+  "dependencies": {
+    "@docusaurus/core": "^3.2.1",
+    "@docusaurus/preset-classic": "^3.2.1",
+    "@mdx-js/react": "^3.0.0",
+    "docusaurus-plugin-sass": "^0.2.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "turndown": "^7.2.2",
+    "turndown-plugin-gfm": "^1.0.2"
+  },
+  "devDependencies": {
+    "sass": "^1.97.1",
+    "sass-loader": "^16.0.6"
+  },
+  "browserslist": {
+    "production": [
+      ">0.5%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
