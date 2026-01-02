@@ -11,10 +11,10 @@
     "docs:normalize": "node .Build/tools/normalize-headings.mjs docs",
     "prebuild": "npm run docs:normalize",
     "deploy": "docusaurus deploy",
-    "admin:start": "node .Build/tools/admin-server/server.mjs",
-    "admin:start:https": "node .Build/tools/admin-server/server.mjs --https",
-    "admin:start:port": "node .Build/tools/admin-server/server.mjs --port=$PORT",
-    "dev": "concurrently \"npm run start\" \"npm run admin:start\""
+    "prepare-server:start": "node .Build/tools/prepare/server/server.mjs",
+    "prepare-server:start:https": "node .Build/tools/prepare/server/server.mjs --https",
+    "prepare-server:start:port": "node .Build/tools/prepare/server/server.mjs --port=$PORT",
+    "dev": "concurrently \"npm run start\" \"npm run prepare-server:start\""
   },
   "dependencies": {
     "@docusaurus/core": "^3.2.1",

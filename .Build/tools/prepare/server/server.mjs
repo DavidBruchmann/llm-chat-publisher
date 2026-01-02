@@ -2,8 +2,8 @@ import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { resolvePort } from './resolvePort.mjs';
-import settings from '../../config/custom-settings.mjs';
-
+import settings from '../../../config/custom-settings.mjs';
+import { registerSettingsApi } from "./api/settings.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -11,6 +11,21 @@ const __dirname = path.dirname(__filename);
 const app = express();
 const { port, protocol } = resolvePort(process.argv);
 
+const CLIENT_DIR = path.resolve(__dirname, "../client");
+
+if (registerSettingsApi(app)) {
+  console.log("[server] settings API registered");
+}
+
+app.use(express.static(CLIENT_DIR));
+
+app.listen(port, () => {
+  console.log(
+    `🛠 Prepare UI running at ${protocol}://localhost:${port}`
+  );
+});
+
+/*
 const publicDir = path.join(__dirname, 'public');
 
 // ✅ serve static admin UI
@@ -29,7 +44,7 @@ app.get('/api/settings', (_req, res) => {
 app.listen(port, () => {
   console.log(`[Admin] ${protocol}://localhost:${port}`);
 });
-
+*/
 
 /*
 import fs from 'fs';
