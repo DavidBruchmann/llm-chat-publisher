@@ -1,7 +1,5 @@
-<p align="center">
-    <a href="#license"><img src="https://img.shields.io/github/license/sourcerer-io/hall-of-fame.svg?colorB=ff0000"></a>
-    [![Deploy LLM Chat Publisher to GitHub Pages](https://github.com/DavidBruchmann/llm-chat-publisher/actions/workflows/deploy.yml/badge.svg)](https://github.com/DavidBruchmann/llm-chat-publisher/actions/workflows/deploy.yml)
-</p>
+<a href="#license"><img src="https://img.shields.io/github/license/sourcerer-io/hall-of-fame.svg?colorB=ff0000"></a>
+[![Deploy LLM Chat Publisher to GitHub Pages](https://github.com/DavidBruchmann/llm-chat-publisher/actions/workflows/deploy.yml/badge.svg)](https://github.com/DavidBruchmann/llm-chat-publisher/actions/workflows/deploy.yml)
 
 ---
 
