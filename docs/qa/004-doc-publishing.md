@@ -12,7 +12,7 @@ Below are the **best existing solutions**, ranked by how well they match your st
 
 ---
 
-## TL;DR (If you want the fastest, cleanest result)
+## Summary: (If you want the fastest, cleanest result)
 
 👉 **Use a static site generator with Markdown**, especially:
 

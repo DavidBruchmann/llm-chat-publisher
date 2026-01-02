@@ -8,7 +8,7 @@
     "build": "docusaurus build",
     "serve": "docusaurus serve",
     "clear": "docusaurus clear",
-    "docs:normalize": "node .Build/scripts/add-front-matter.mjs",
+    "docs:normalize": "node .Build/tools/normalize-headings.mjs docs",
     "prebuild": "npm run docs:normalize",
     "deploy": "docusaurus deploy",
     "admin:start": "node .Build/tools/admin-server/server.mjs",

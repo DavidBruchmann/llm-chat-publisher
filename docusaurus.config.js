@@ -9,10 +9,10 @@ const isProd = process.env.NODE_ENV === 'production';
 export default {
   title: 'Q&A Knowledge Base',
   tagline: 'Real questions. Structured answers.',
-  url: isProd ? 'https://DavidBruchmann.github.io' : 'http://localhost:3000/',
-  baseUrl: isProd ? '/' : '/',
+  url: 'https://davidbruchmann.github.io',
+  baseUrl: '/llm-chat-publisher/',
   organizationName: 'DavidBruchmann',
-  projectName: 'DavidBruchmann.github.io',
+  projectName: 'llm-chat-publisher',
 
   onBrokenLinks: 'throw',
   markdown: {

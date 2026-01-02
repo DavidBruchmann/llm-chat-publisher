@@ -1,3 +1,17 @@
+/**
+ * add-front-matter.mjs
+ *
+ * Adds Docusaurus-compatible front matter to Markdown files
+ * that do not already contain front matter.
+ *
+ * Derives:
+ * - title from filename
+ * - tags from directory structure
+ *
+ * Usage:
+ *   node add-front-matter.mjs
+ */
+
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
@@ -18,8 +32,8 @@ function generateFrontMatter(filePath) {
   const parts = relative.split(path.sep);
 
   const fileName = path.basename(filePath, ".md");
-  const section = parts[0];            // qa, topics
-  const topic = parts[1] || section;   // passive-income
+  const section = parts[0] ?? "docs";  // qa, topics
+  const topic = parts[1] ?? section;   // passive-income
 
   const title = titleFromSlug(fileName);
   const description = `Notes and answers about ${title.toLowerCase()}.`;
@@ -42,6 +56,7 @@ function processFile(filePath) {
 
   const frontMatter = generateFrontMatter(filePath);
   fs.writeFileSync(filePath, frontMatter + "\n" + content);
+  console.log(`✔ added front matter: ${filePath}`);
 }
 
 function walk(dir) {
