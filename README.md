@@ -1,4 +1,7 @@
-Perfect! Here’s a **fully polished, ready-to-paste README** with all chapters included: Overview, Workflow, Repo Structure, Installation & Scripts, Content Workflow, Deployment, and a short chapter on crucial Docusaurus aspects with links.
+<p align="center">
+    <a href="#license"><img src="https://img.shields.io/github/license/sourcerer-io/hall-of-fame.svg?colorB=ff0000"></a>
+    <a href="https://github.com/davidbruchmann/llm-chat-publisher/actions/workflows/tests.yml"><img src="https://davidbruchmann/llm-chat-publisher/actions/workflows/tests.yml/badge.svg" alt="GitHub Actions status"></a>
+</p>
 
 ---
 
